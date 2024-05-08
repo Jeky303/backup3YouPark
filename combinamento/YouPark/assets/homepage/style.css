@@ -1,0 +1,168 @@
+/* DIV Buttoni servizi */
+
+/* Stile generale dei pulsanti */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Utilizza al massimo 200px per colonna, adattandosi al contenitore */
+    grid-gap: 20px; /* Spazio tra i pulsanti */
+    justify-content: center; /* Allinea i pulsanti al centro orizzontalmente */
+    padding: 0 20px; /* Distanza dai lati sinistro e destro */
+    margin: 40px 0; /* Margine superiore e inferiore */
+}
+
+.button-container button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--info);
+    border: none;
+    border-radius: 45px;
+    padding: 1.5em;
+    margin: 10px; /* Aggiungi spazio tra i pulsanti */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+.button-container button:hover {
+    background-color: #23d9e0;
+    transform: translateY(-3px);
+}
+
+.button-container button img {
+    max-width: 40px; /* Larghezza massima per l'immagine */
+    margin-bottom: 5px; /* Spazio tra l'immagine e il testo */
+}
+
+.button-container button span {
+    font-size: 18px; /* Dimensione del testo */
+    color: #333; /* Colore del testo */
+}
+
+
+
+
+
+.parkingo-info {
+    background-color: rgba(0, 0, 0, 0.8); /* Sfondo semi-trasparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Inizialmente nascosto */
+    z-index: 9999; /* Assicura che sia sopra tutti gli altri elementi */
+}
+
+.parkingo-info .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.parkingo-info .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    overflow-y: auto; /* Scroll se il contenuto è troppo grande */
+}
+
+.parkingo-info h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.parkingo-info p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.parkingo-info .feature {
+    margin-bottom: 30px;
+}
+
+.parkingo-info .feature h3 {
+    color: #23d9e0;
+    margin-bottom: 10px;
+}
+
+.parkingo-info .feature p {
+    color: #333;
+}
+
+/* Stili per la tabella senza bordi */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.table td {
+    border-top: none;
+}
+
+
+
+.banner,.banner-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    gap: 20px; /* Adjust the gap between columns */
+}
+
+.banner-1{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.field {
+    text-align: center;
+}
+.field img {
+    border-radius: 50%;
+}
+.field h2 {
+    margin-bottom: 10px;
+    }
+
+
+
+
+
+
+
+    .container3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+    }
+    .left-side {
+        flex: 1;
+        text-align: center;
+    }
+    .right-side {
+        flex: 1;
+        padding: 0 20px;
+    }
+    .container3 img {
+        max-width: 100%;
+        height: auto;
+    }
+  

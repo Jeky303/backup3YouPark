@@ -1,0 +1,161 @@
+/* Stili per la struttura delle righe */
+.top-row,
+.bottom-row {
+    position: relative;
+    top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Distribuisce uniformemente gli elementi sulla riga */
+}
+
+#abbonamento {
+    position: relative;
+    top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* due colonne di larghezza uguale */
+    grid-template-rows: auto auto;
+    /* due righe con altezza automatica */
+    gap: 10px;
+    /* spazio tra le celle */
+}
+
+/* Stili per i figli diretti di #abbonamento */
+#abbonamento>div {
+    background-color: #f2f2f2;
+    text-align: center;
+    /* sfondo grigio chiaro */
+    padding: 20px;
+    /* spazio interno */
+}
+
+#abbonamento>div>.card {
+    margin: 10px auto;
+}
+
+/* Stili per gli elementi del servizio */
+.service-item {
+    width: calc(50% - 20px);
+    /* Calcola la larghezza degli elementi in base alla dimensione della riga */
+    margin: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.service-item:not(.active):hover {
+    box-shadow: 0px 0px 3px 3px inset var(--info);
+    transform: scale(0.95);
+}
+
+.service-item.active {
+    background-color: var(--info);
+}
+
+/* Media query per dispositivi con larghezza massima di 480px (telefono) */
+@media only screen and (max-width: 480px) {
+
+    .top-row,
+    .bottom-row {
+        flex-direction: column;
+        /* Cambia la disposizione degli elementi in colonne */
+    }
+
+    .service-item {
+        width: 100%;
+        /* La larghezza degli elementi sarà al 100% della riga */
+    }
+}
+
+.card {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid var(--info);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card-header {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.card-header.warning {
+    background-color: var(--secondary);
+    margin-bottom: 20px;
+    opacity: 1;
+    border-radius: 20px;
+}
+
+.rinnovaScaduto {
+    margin-left: 20px;
+    margin-right: 5px;
+    background-color: var(--light);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--success);
+    opacity: 50%;
+}
+
+.rinnovaScaduto:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#selectAbbonamento {
+    color: var(--success);
+    background-color: var(--light);
+
+}
+
+.rinnovaScaduto:hover #selectAbbonamento {
+    opacity: 0;
+}
+
+.dimenticaScaduto {
+
+    margin-left: 20px;
+    background-color: var(--light);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--danger);
+    opacity: 50%;
+}
+
+.dimenticaScaduto:hover {
+
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.card-info {
+    padding: 10px;
+}
+
+.card a {
+    color: var(--info);
+    font-weight: bold;
+}
+
+.label {
+    font-weight: 500;
+}
+
+.paypal_button {
+    background-color: #00BD68;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 44px;
+    line-height: 44px;
+    width: 100%;
+    border: 0;
+}
